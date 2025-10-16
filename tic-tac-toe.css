@@ -105,7 +105,11 @@ h1 span {
   border-color: var(--lighterBlue);
   cursor: pointer;
 }
-
+.square:hover{
+  background-color: var(--lightGrey);
+  border: 1px solid var(--lighterBlue);
+  cursor: pointer;
+}
 .hover.O {
   color: white;
 }
