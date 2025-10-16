@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const status = document.getElementById("status");
   let player = "X"
 
+  const newGame = document.querySelector(".btn");
+
+
   function checkWinner() {
             const s = gameState;
 
@@ -48,6 +51,16 @@ document.addEventListener("DOMContentLoaded", function () {
             player = player == "X" ? "O" : "X";
         }
 
+    })
+
+    newGame.addEventListener("click", function(){
+        squares.forEach(function (square, index){
+            square.textContent = null;
+            square.classList.remove("X", "O");
+            gameState[index] = null;
+        });
+        status.classList.remove("you-won");
+        status.textContent = "Move your mouse over a square and click to play an X or an O.";
     })
   });
 });
